@@ -37,3 +37,14 @@ Follow the steps below to generate a new cross `libpython` kit:
     gendef python38.dll
     x86_64-w64-mingw32-dlltool -D python38.dll -d python38.def -l libpython38.a
     ```
+
+## Build GDB
+
+```
+/usr/local/src/gdb-9.1/configure \
+    --build=x86_64-build_pc-linux-gnu
+    --host=x86_64-w64-mingw32
+    --target=arm-none-eabi
+    --prefix=<OUTDIR>
+    --with-python=${LIBPYTHON_KIT_ROOT}/bin/python
+```
