@@ -1,4 +1,4 @@
-# mingw-w64-libpython
+# crosskit-mingw-w64-libpython
 
 This repository contains the pre-generated `libpython*.dll` import libraries
 and headers for the MinGW-w64, in order to facilitate Linux-to-Windows cross
@@ -42,9 +42,9 @@ Follow the steps below to generate a new cross `libpython` kit:
 
 ```
 /usr/local/src/gdb-9.1/configure \
-    --build=x86_64-build_pc-linux-gnu
-    --host=x86_64-w64-mingw32
-    --target=arm-none-eabi
-    --prefix=<OUTDIR>
+    --build=x86_64-build_pc-linux-gnu \
+    --host=x86_64-w64-mingw32 \
+    --target=arm-none-eabi \
+    --prefix=<OUTDIR> \
     --with-python=${LIBPYTHON_KIT_ROOT}/bin/python
 ```
