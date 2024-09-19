@@ -1,0 +1,15 @@
+#!/bin/bash
+
+case "$2" in
+	--includes)
+		echo "-I${LIBPYTHON_KIT_ROOT}/include"
+		;;
+	--ldflags)
+		echo "-L${LIBPYTHON_KIT_ROOT}/lib -lpython310"
+		;;
+	--exec-prefix)
+		echo "/usr"
+		;;
+esac
+
+exit 0
