@@ -5,7 +5,7 @@ case "$2" in
 		echo "-I${LIBPYTHON_KIT_ROOT}/include"
 		;;
 	--ldflags)
-		echo "-L${LIBPYTHON_KIT_ROOT}/lib -lpython310"
+		echo "-L${LIBPYTHON_KIT_ROOT}/lib -lpython312"
 		;;
 	--exec-prefix)
 		echo "/usr"
